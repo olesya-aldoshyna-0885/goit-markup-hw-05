@@ -113,7 +113,6 @@ address {
 .link:hover,
 .link:focus {
     color: var(--accent-color);
-    transition: color var(--changes);
 }
 
 .site-contacts .contacts-link.link {
@@ -123,23 +122,24 @@ address {
 .contacts-link.link:hover,
 .contacts-link.link:focus {
     color: var(--accent-color);
-    transition: color var(--changes);
 }
 
 .contacts-link {
 display: flex;
 justify-content: center;
 align-items: center;
+transition: color var(--changes);
 }
+
 .connection {
     margin-right: 10px;
     fill: currentColor;
+    transition: fill var(--changes);
 }
 
 .connection:hover,
 .connection:focus {
     fill: var(--accent-color);
-    transition: fill var(--changes);
 }
 
 /*Футер*/
@@ -197,6 +197,7 @@ align-items: center;
     background-color: var(--grey-color);
     border-radius: 4px;
     padding: 6px 22px 6px 22px;
+    transition: color var(--changes), background-color var(--changes), box-shadow var(--changes);
 }
 
 .filter-btn:hover,
@@ -205,7 +206,6 @@ align-items: center;
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
     border-radius: 4px;
-    transition: color var(--changes), background-color var(--changes), box-shadow var(--changes);
 }
 
 .studio-btn {
@@ -220,6 +220,7 @@ align-items: center;
     color: var(--last-color);
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: color var(--changes), background-color var(--changes), box-shadow var(--changes);
 }
 
 .studio-btn:hover,
@@ -227,8 +228,7 @@ align-items: center;
     background-color: #188ce8;
     color: var(--last-color);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-    border-radius: 4px;
-    transition: color var(--changes), background-color var(--changes), box-shadow var(--changes);
+    border-radius: 4px;    
 }
 
 /* Студия*/
@@ -415,18 +415,18 @@ color: var(--last-color);
     align-items: center;
     justify-content: center;
     fill: var(--soc-color);
+    transition: fill var(--changes), border var(--changes);;
 }
 
 .customers-link:hover .soc-icon,
 .customers-link:focus .soc-icon {
     fill: var(--accent-color);
-    transition: fill var(--changes);
+    
 }
 
 .customers-item:hover,
 .customers-item:focus {
     border: 1px solid var(--accent-color);
-    transition: border var(--changes);
 }
 
 /*Портфолио*/
@@ -475,13 +475,13 @@ color: var(--last-color);
 
 .works-link {
     display: block;
+    transition: color var(--changes), box-shadow var(--changes);
 }
 
 .works-link:hover,
 .works-link:focus {
     color: inherit;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: color var(--changes), box-shadow var(--changes);
 }
 
 /*Иконки*/
@@ -493,13 +493,13 @@ color: var(--last-color);
     height: 44px;
     fill: var(--soc-color);
     border-radius: 50%;
+    transition: background-color var(--changes), fill var(--changes);
 }
 
 .soc-link:hover,
 .soc-link:focus {
     background-color: var(--accent-color);
     fill: var(--last-color);
-    transition: background-color var(--changes), fill var(--changes);
 }
 
 .soc-list {
@@ -532,14 +532,15 @@ color: var(--last-color);
 .soc-list-footer .soc-link {
     fill: var(--last-color);
     background: rgba(255, 255, 255, 0.1);
+    transition: fill var(--changes), background-color var(--changes);
 }
 
 .soc-list-footer .soc-link:hover,
 .soc-list-footer .soc-link:focus {
-fill: var(--last-color);
-background-color: var(--accent-color);
-transition: fill var(--changes), background-color var(--changes);
+    fill: var(--last-color);
+    background-color: var(--accent-color);
 }
+
 /*Позицiонування*/
 .example-items {
     position: relative;
@@ -578,7 +579,6 @@ transition: fill var(--changes), background-color var(--changes);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform var(--changes);
     display: flex;
     justify-content: flex-end;
     min-width: 528px;
@@ -586,6 +586,7 @@ transition: fill var(--changes), background-color var(--changes);
     background-color: var(--last-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transition: transform var(--changes);
 }
 
 .backdrop.is-hidden .modal {
@@ -629,7 +630,6 @@ transition: fill var(--changes), background-color var(--changes);
 .works-link:hover .overlay-text,
 .works-link:focus .overlay-text {
     transform: translateY(0%);
-    transition: transform var(--changes);
 }
 
 .menu-link {
@@ -654,5 +654,4 @@ transition: fill var(--changes), background-color var(--changes);
 .current:hover::after,
 .current:focus::after {
     transform: scaleX(1);
-    transition: background-color var(--changes), transform var(--changes);
 }
